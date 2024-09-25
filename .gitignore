@@ -1,0 +1,13 @@
+.env
+amvera.yml
+**/__pycache__/
+**/.idea/
+history.txt
+window_getters/users.db
+__pycache__/
+**/.vscode/
+.venv/
+venv/
+.idea/
+/.vscode
+*.db

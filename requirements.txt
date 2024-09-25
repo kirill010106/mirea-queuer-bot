@@ -1,0 +1,4 @@
+aiogram~=3.13.0
+environs~=11.0.0
+aiogram_dialog
+aiosqlite

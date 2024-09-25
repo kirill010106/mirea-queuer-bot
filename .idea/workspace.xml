@@ -1,30 +1,84 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="7d152a7b-c488-4940-acda-6a852ae25655" name="Changes" comment="" />
+    <list default="true" id="7d152a7b-c488-4940-acda-6a852ae25655" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/utils/password_checker.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/mirea-queuer-bot.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/mirea-queuer-bot.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config_data/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/config_data/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/dbProcessor.py" beforeDir="false" afterPath="$PROJECT_DIR$/db/dbProcessor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/lessons.py" beforeDir="false" afterPath="$PROJECT_DIR$/db/lessons.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dialogs/dialogs.py" beforeDir="false" afterPath="$PROJECT_DIR$/dialogs/dialogs.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/getters/getters.py" beforeDir="false" afterPath="$PROJECT_DIR$/getters/getters.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/handlers/handlers.py" beforeDir="false" afterPath="$PROJECT_DIR$/handlers/handlers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/states/states.py" beforeDir="false" afterPath="$PROJECT_DIR$/states/states.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/add_to_queue.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/add_to_queue.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/lessons_kbd_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/lessons_kbd_generator.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 7
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="2mF3YLNdRlEXbvWzkMoXlILPzxW" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.Start polling.executor&quot;: &quot;Run&quot;,
+    &quot;Python.dbProcessor.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;
   }
-}]]></component>
+}</component>
+  <component name="RunManager">
+    <configuration name="Start polling" type="PythonConfigurationType" factoryName="Python">
+      <module name="mirea-queuer-bot" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Python 3.11 (mirea-queuer-bot)" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
