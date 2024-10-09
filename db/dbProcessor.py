@@ -75,7 +75,7 @@ async def remove_from_queue_output(callback: types.CallbackQuery, widget: Button
 
 async def _get_queue():
     async with sq3.connect(os.path.join(path, "queue.db")) as db:
-        cur = await db.execute("SELECT * FROM queue")
+        cur = await db.execute("SELECT * FROM queue ORDER BY time")
         queue_list = await cur.fetchall()
     return queue_list
 
