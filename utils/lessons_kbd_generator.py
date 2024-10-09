@@ -10,13 +10,13 @@ from db.lessons import lessons
 from db.queues import lessonsQueue
 from states.states import UserState
 
-from db.dbProcessor import clear_queue
+from db.dbProcessor import clear_queue, set_lesson_to_table
 
 
 async def set_lesson(callback: types.CallbackQuery, widget: Any,
                      dialog_manager: DialogManager, item_id: str, **kwargs):
     await clear_queue()
-    dialog_manager.dialog_data["current_lesson"] = lessons[int(item_id)][0]
+    await set_lesson_to_table(lessons[int(item_id)][0])
     await dialog_manager.event.answer(f"Предмет успешно изменен на {lessons[int(item_id)][0]}")
     # lessonsQueue.get(lessons[int(item_id)])[0] = {}
     await dialog_manager.switch_to(UserState.main)

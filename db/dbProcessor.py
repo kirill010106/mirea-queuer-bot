@@ -24,6 +24,35 @@ async def create_table():
         await db.commit()
 
 
+async def create_lesson_table():
+    async with sq3.connect(os.path.join(path, "lesson.db")) as db:
+        await db.execute("""
+            CREATE TABLE IF NOT EXISTS lesson(
+            lesson STRING PRIMARY KEY NOT NULL)
+            """)
+        await db.commit()
+
+
+async def set_lesson_to_table(lesson: str):
+    async with sq3.connect(os.path.join(path, "lesson.db")) as db:
+        await db.execute("DELETE FROM lesson")
+        await db.commit()
+        await db.execute("""
+            INSERT OR IGNORE INTO lesson (lesson) VALUES (?)
+            """, (lesson, ))
+        await db.commit()
+
+
+async def get_lesson_from_table():
+    async with sq3.connect(os.path.join(path, "lesson.db")) as db:
+        cur = await db.execute("SELECT * FROM lesson")
+        try:
+            res = list(await cur.fetchone())[0]
+        except TypeError:
+            return None
+        return res
+
+
 async def add_to_queue(user_id: int, user_login: str, user_name: str, checkin_time: float):
     async with sq3.connect(os.path.join(path, "queue.db")) as db:
         await db.execute("""
@@ -74,6 +103,6 @@ async def clear_queue():
 
 
 async def run():
-    await create_table()
+    await create_lesson_table()
 
 asyncio.run(run())
