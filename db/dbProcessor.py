@@ -37,10 +37,12 @@ async def remove_from_queue(user_id: int):
         await db.execute("DELETE FROM queue WHERE id=?", (user_id, ))
         await db.commit()
 
+
 async def remove_from_queue_output(callback: types.CallbackQuery, widget: Button, dialog_manager: DialogManager):
     await remove_from_queue(callback.from_user.id)
     await callback.answer("Вы вышли из очереди.")
     await dialog_manager.switch_to(UserState.main)
+
 
 async def _get_queue():
     async with sq3.connect(os.path.join(path, "queue.db")) as db:
@@ -55,15 +57,12 @@ async def pass_queue():
     lst = await _get_queue()
     if lst:
         for i in lst:
-            format_queue += str(count) + ". " + "@" + i[1] + " : " + i[2] + " UNIX: " + str(i[3]) + "\n"
+            format_queue += str(count) + ". " + "@" + i[1] + " : " + i[2] + "\n"
             # await callback.message.answer(str(count) + ". " + "@" + i[1] + " : " + i[2] + " UNIX: " + str(i[3]))
             count += 1
         return format_queue
     else:
         return "Очередь в данный момент пуста."
-
-
-
 
 
 async def clear_queue():
@@ -72,6 +71,7 @@ async def clear_queue():
         DELETE FROM queue
         """)
         await db.commit()
+
 
 async def run():
     await create_table()
