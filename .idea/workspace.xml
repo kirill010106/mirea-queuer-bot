@@ -5,22 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7d152a7b-c488-4940-acda-6a852ae25655" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/utils/password_checker.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/mirea-queuer-bot.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/mirea-queuer-bot.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/reload_window.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config_data/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/config_data/config.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/dbProcessor.py" beforeDir="false" afterPath="$PROJECT_DIR$/db/dbProcessor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/lessons.py" beforeDir="false" afterPath="$PROJECT_DIR$/db/lessons.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dialogs/dialogs.py" beforeDir="false" afterPath="$PROJECT_DIR$/dialogs/dialogs.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/getters/getters.py" beforeDir="false" afterPath="$PROJECT_DIR$/getters/getters.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/handlers/handlers.py" beforeDir="false" afterPath="$PROJECT_DIR$/handlers/handlers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/states/states.py" beforeDir="false" afterPath="$PROJECT_DIR$/states/states.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/add_to_queue.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/add_to_queue.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/lessons_kbd_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/lessons_kbd_generator.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,21 +39,21 @@
   &quot;keyToString&quot;: {
     &quot;Python.Start polling.executor&quot;: &quot;Run&quot;,
     &quot;Python.dbProcessor.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/konst/PycharmProjects/mirea-queuer-bot&quot;
   }
 }</component>
   <component name="RunManager">
     <configuration name="Start polling" type="PythonConfigurationType" factoryName="Python">
       <module name="mirea-queuer-bot" />
-      <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="SDK_NAME" value="Python 3.11 (mirea-queuer-bot)" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
