@@ -86,7 +86,10 @@ async def pass_queue():
     lst = await _get_queue()
     if lst:
         for i in lst:
-            format_queue += str(count) + ". " + "@" + i[1] + " : " + i[2] + "\n"
+            if i[1]:
+                format_queue += str(count) + ". " + "@" + i[1] + " : " + i[2] + "\n"
+            else:
+                format_queue += str(count) + ". " + i[2] + "\n"
             # await callback.message.answer(str(count) + ". " + "@" + i[1] + " : " + i[2] + " UNIX: " + str(i[3]))
             count += 1
         return format_queue
