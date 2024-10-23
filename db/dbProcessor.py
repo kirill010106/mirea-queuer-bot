@@ -43,6 +43,7 @@ async def create_lessons_table():
 
 
 async def get_lessons_list() -> list:
+    await create_lessons_table()
     async with sq3.connect(os.path.join(path, "lessons.db")) as db:
         cur = await db.execute("""
             SELECT * FROM lessons
@@ -53,6 +54,7 @@ async def get_lessons_list() -> list:
 
 
 async def add_lesson_to_db(lesson: str):
+    await create_lesson_table()
     async with sq3.connect(os.path.join(path, "lessons.db")) as db:
         await db.execute("""
         INSERT OR IGNORE INTO lessons (lesson) VALUES (?)
@@ -61,6 +63,7 @@ async def add_lesson_to_db(lesson: str):
 
 
 async def delete_lesson_from_db(id: int):
+    await create_lessons_table()
     async with sq3.connect(os.path.join(path, "lessons.db")) as db:
         await db.execute("""
         DELETE FROM lessons WHERE id = ?
