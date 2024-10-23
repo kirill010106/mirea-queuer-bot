@@ -15,8 +15,8 @@ async def set_lesson(callback: types.CallbackQuery, widget: Any,
                      dialog_manager: DialogManager, item_id: str, **kwargs):
     lessons_list = await get_lessons_list()
     await clear_queue()
-    await set_lesson_to_table(lessons_list[int(item_id)][0])
-    await dialog_manager.event.answer(f"Предмет успешно изменен на {lessons_list[int(item_id)][0]}")
+    await set_lesson_to_table(lessons_list[int(item_id)-1][0])
+    await dialog_manager.event.answer(f"Предмет успешно изменен на {lessons_list[int(item_id)-1][0]}")
     await dialog_manager.switch_to(UserState.main)
 
 lessons_kbd = Select(

@@ -37,7 +37,9 @@ async def create_lessons_table():
     async with sq3.connect(os.path.join(path, "lessons.db")) as db:
         await db.execute("""
             CREATE TABLE IF NOT EXISTS lessons(
-            lesson STRING PRIMARY KEY NOT NULL)
+            lesson STRING NOT NULL,
+            id INTEGER UNIQUE,
+            PRIMARY KEY("id" AUTOINCREMENT))
             """)
         await db.commit()
 
@@ -58,7 +60,7 @@ async def add_lesson_to_db(lesson: str):
     async with sq3.connect(os.path.join(path, "lessons.db")) as db:
         await db.execute("""
         INSERT OR IGNORE INTO lessons (lesson) VALUES (?)
-        """, (lesson, ))
+        """, (lesson,))
         await db.commit()
 
 
@@ -67,7 +69,7 @@ async def delete_lesson_from_db(id: int):
     async with sq3.connect(os.path.join(path, "lessons.db")) as db:
         await db.execute("""
         DELETE FROM lessons WHERE id = ?
-        """, (id, ))
+        """, (id,))
         await db.commit()
 
 
@@ -77,7 +79,7 @@ async def set_lesson_to_table(lesson: str):
         await db.commit()
         await db.execute("""
             INSERT OR IGNORE INTO lesson (lesson) VALUES (?)
-            """, (lesson, ))
+            """, (lesson,))
         await db.commit()
 
 
@@ -101,7 +103,7 @@ async def add_to_queue(user_id: int, user_login: str, user_name: str, checkin_ti
 
 async def remove_from_queue(user_id: int):
     async with sq3.connect(os.path.join(path, "queue.db")) as db:
-        await db.execute("DELETE FROM queue WHERE id=?", (user_id, ))
+        await db.execute("DELETE FROM queue WHERE id=?", (user_id,))
         await db.commit()
 
 
@@ -141,7 +143,6 @@ async def clear_queue():
         DELETE FROM queue
         """)
         await db.commit()
-
 
 # async def run():
 #     ...
