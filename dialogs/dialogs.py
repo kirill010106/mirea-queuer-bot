@@ -4,12 +4,14 @@ from aiogram_dialog.widgets.kbd import SwitchTo, Button, Select, Column
 from aiogram_dialog.widgets.text import Const, Format
 
 from getters.getters import current_lesson_and_queue_getter, lessons_getter
+from handlers.windows_handlers import add_lesson_handler
 from states.states import UserState
-from utils.lessons_kbd_generator import lessons_kbd
+from utils.lessons_kbd_generator import lessons_kbd, lessons_to_delete_kbd
 from utils.add_to_queue import add_to_queue
 from db.dbProcessor import clear_queue, pass_queue, remove_from_queue_output
 from utils.password_checker import is_password_correct
 from utils.reload_window import reload_window
+
 main_dialog = Dialog(
     Window(
         Const("Добро пожаловать в QueuerBot"),
@@ -56,6 +58,8 @@ main_dialog = Dialog(
         Const("Выберите новую пару для записи:"),
         Const("ВНИМАНИЕ, вся прошлая запись будет сброшена!"),
         Column(
+            SwitchTo(Const("+"), state=UserState.add_lesson_to_db, id="add_lesson_to_db"),
+            SwitchTo(Const("-"), state=UserState.delete_lesson_from_db, id="delete_lesson_from_db"),
             lessons_kbd,
         ),
         # SwitchTo(Const("[Выбрать]"), state=UserState.lesson_confirmation, id="lesson_choose"),
@@ -68,5 +72,20 @@ main_dialog = Dialog(
         Button(Const("Да"), id="confirm"),
         SwitchTo(Const("Вернуться"), state=UserState.main, id="back"),
         state=UserState.lesson_confirmation,
+    ),
+    Window(
+        Const("Введите название пары, которую хотите добавить в список."),
+        MessageInput(add_lesson_handler),
+        SwitchTo(Const("Назад"), id="back", state=UserState.main),
+        state=UserState.add_lesson_to_db
+    ),
+    Window(
+        Const("Выберите из списка пару, которую нужно удалить."),
+        SwitchTo(Const("--- Назад ---"), id="back", state=UserState.main),
+        Column(
+            lessons_to_delete_kbd,
+        ),
+        state=UserState.delete_lesson_from_db,
+        getter=lessons_getter,
     )
 )

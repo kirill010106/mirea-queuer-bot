@@ -33,6 +33,41 @@ async def create_lesson_table():
         await db.commit()
 
 
+async def create_lessons_table():
+    async with sq3.connect(os.path.join(path, "lessons.db")) as db:
+        await db.execute("""
+            CREATE TABLE IF NOT EXISTS lessons(
+            lesson STRING PRIMARY KEY NOT NULL)
+            """)
+        await db.commit()
+
+
+async def get_lessons_list() -> list:
+    async with sq3.connect(os.path.join(path, "lessons.db")) as db:
+        cur = await db.execute("""
+            SELECT * FROM lessons
+            """)
+        res = list(await cur.fetchall())
+        await db.commit()
+        return res
+
+
+async def add_lesson_to_db(lesson: str):
+    async with sq3.connect(os.path.join(path, "lessons.db")) as db:
+        await db.execute("""
+        INSERT OR IGNORE INTO lessons (lesson) VALUES (?)
+        """, (lesson, ))
+        await db.commit()
+
+
+async def delete_lesson_from_db(id: int):
+    async with sq3.connect(os.path.join(path, "lessons.db")) as db:
+        await db.execute("""
+        DELETE FROM lessons WHERE id = ?
+        """, (id, ))
+        await db.commit()
+
+
 async def set_lesson_to_table(lesson: str):
     async with sq3.connect(os.path.join(path, "lesson.db")) as db:
         await db.execute("DELETE FROM lesson")
@@ -105,7 +140,7 @@ async def clear_queue():
         await db.commit()
 
 
-async def run():
-    await create_lesson_table()
-
-asyncio.run(run())
+# async def run():
+#     ...
+#
+# asyncio.run(run())

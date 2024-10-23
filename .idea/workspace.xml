@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7d152a7b-c488-4940-acda-6a852ae25655" name="Changes" comment="" />
+    <list default="true" id="7d152a7b-c488-4940-acda-6a852ae25655" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/handlers/windows_handlers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/dbProcessor.py" beforeDir="false" afterPath="$PROJECT_DIR$/db/dbProcessor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dialogs/dialogs.py" beforeDir="false" afterPath="$PROJECT_DIR$/dialogs/dialogs.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/getters/getters.py" beforeDir="false" afterPath="$PROJECT_DIR$/getters/getters.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/states/states.py" beforeDir="false" afterPath="$PROJECT_DIR$/states/states.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/lessons_kbd_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/lessons_kbd_generator.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
